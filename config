@@ -42,6 +42,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Shift+Return exec sakura
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -110,6 +111,7 @@ set $wsvim "vim"
 set $wsbrowser "browser"
 set $wsshell "shell"
 set $wssocial "social/email"
+set $wsaudio "audio"
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -126,6 +128,7 @@ bindsym $mod+i workspace $wsvim
 bindsym $mod+n workspace $wsbrowser
 bindsym $mod+u workspace $wsshell
 bindsym $mod+m workspace $wssocial
+bindsym $mod+b workspace $wsaudio
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
 bindsym $mod+3 workspace number $ws3
@@ -142,6 +145,7 @@ bindsym $mod+Shift+i move container to workspace $wsvim
 bindsym $mod+Shift+n move container to workspace $wsbrowser
 bindsym $mod+Shift+u move container to workspace $wsshell
 bindsym $mod+Shift+m move container to workspace $wssocial
+bindsym $mod+Shift+b move container to workspace $wsaudio
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
 bindsym $mod+Shift+3 move container to workspace number $ws3
@@ -196,5 +200,12 @@ bindsym $mod+x move workspace to output right
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+        mode hide
         status_command i3status
+        workspace_min_width 80
+        font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+        font pango:DejaVu Sans Mono 20
 }
+
+default_border pixel 1
+hide_edge_borders smart

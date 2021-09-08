@@ -31,3 +31,4 @@ Extra options and mappings:
 - use back-and-forth 
 - remap ```jkl;``` into ```hjkl``` (Vim-like)
 - move workspace to another screen
+- some i3-bar modifications
