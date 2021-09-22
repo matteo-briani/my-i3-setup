@@ -107,6 +107,7 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
+set $wspages "pages"
 set $wsvim "vim"
 set $wsbrowser "browser"
 set $wsshell "shell"
@@ -124,6 +125,7 @@ set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
+bindsym $mod+p workspace $wspages
 bindsym $mod+i workspace $wsvim
 bindsym $mod+n workspace $wsbrowser
 bindsym $mod+u workspace $wsshell
@@ -141,6 +143,7 @@ bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
 # move focused container to workspace
+bindsym $mod+Shift+p move container to workspace $wspages
 bindsym $mod+Shift+i move container to workspace $wsvim
 bindsym $mod+Shift+n move container to workspace $wsbrowser
 bindsym $mod+Shift+u move container to workspace $wsshell
